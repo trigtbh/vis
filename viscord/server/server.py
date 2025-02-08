@@ -17,7 +17,6 @@ from flask import request
 import requests
 
 import psycopg2
-import sqlite3
 from api import server_config as sc
 from uuid import uuid4
 
@@ -47,11 +46,7 @@ connections: Dict[str, socket.socket] = {}
 
 def handle_message(data: dict):
 
-    # connection = psycopg2.connect(db.conn_uri)
-    # cursor = connection.cursor()
-
-
-    connection = sqlite3.connect("api/viscord.db")
+    connection = psycopg2.connect(db.conn_uri)
     cursor = connection.cursor()
 
 
