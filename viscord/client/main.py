@@ -9,7 +9,6 @@ import blessed
 import colors
 import keyshortcuts
 sys.path.append("../..")
-import launcher
 
 term = blessed.Terminal()
 
